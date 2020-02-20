@@ -1,0 +1,98 @@
+.rdrCalendarWrapper {
+  box-sizing: border-box;
+  background: #ffffff;
+  display: inline-flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.rdrDateDisplay{
+  display: flex;
+  justify-content: space-between;
+}
+
+.rdrDateDisplayItem{
+  flex: 1 1;
+  width: 0;
+  text-align: center;
+  color: inherit;
+  & + &{
+    margin-left: 0.833em;
+  }
+  input{
+    text-align: inherit;
+    &:disabled{
+      cursor: default;
+    }
+  }
+}
+
+
+.rdrMonthAndYearWrapper {
+  box-sizing: inherit;
+  display: flex;
+  justify-content: space-between;
+  &__box {
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    &:not(:last-of-type) {
+      border-right: 1px solid $border-color;
+    }
+  }
+}
+
+.rdrMonthAndYearPickers{
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rdrNextPrevButton {
+  box-sizing: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.rdrMonths{
+  display: flex;
+}
+
+.rdrMonthsVertical{
+  flex-direction: column;
+}
+
+.rdrMonthsHorizontal > div > div > div{
+  display: flex;
+  flex-direction: row;
+}
+
+.rdrMonth{
+  width: 27.667em;
+}
+
+.rdrWeekDays{
+  display: flex;
+}
+
+.rdrWeekDay {
+  flex-basis: calc(100% / 7);
+  box-sizing: inherit;
+  text-align: center;
+}
+
+.rdrDays{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rdrInfiniteMonths{
+  overflow: auto;
+}
+.top-navigation {
+  display: flex;
+  align-items: center;
+}

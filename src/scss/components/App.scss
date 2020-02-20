@@ -1,0 +1,5 @@
+.App {
+  padding: 32px;
+  @include flex(flex-end);
+  min-height: 100vh;
+}

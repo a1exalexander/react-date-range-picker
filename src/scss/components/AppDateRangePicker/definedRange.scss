@@ -1,0 +1,155 @@
+
+.rdrDefinedRangesWrapper{
+  width: 310px;
+  padding: 0 16px;
+  background-color: white;
+  color: var(--font-color);
+  font-size: 13px;
+  &__selection {
+    padding: 16px 0 16px 0;
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--mb {
+      margin-bottom: 15px;
+    }
+  }
+  &__dash {
+    margin: 0 4px;
+  }
+  &__input {
+    width: calc(50%);
+    padding: 7px 12px;
+    border: 1px solid $border-color;
+    border-radius: 17.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+  }
+  &__caption {
+    margin-right: 16px;
+  }
+}
+
+.rdrStaticRanges{
+  display: flex;
+  flex-direction: column;
+}
+
+.rdrStaticRange{
+  font-size: inherit;
+}
+
+.rdrInputRange{
+  display: flex;
+}
+
+.rdrSelect {
+  flex: 1 1;
+  padding: 6px 24px 6px 12px;
+  border: 1px solid $border-color;
+  border-radius: 17.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  &__wrapper {
+    position: relative;
+    @include flex(stretch, center);
+    &:after {
+      pointer-events: none;
+      position: absolute;
+      right: 2px;
+      content: '';
+      top: 5px;
+      bottom: 5px;
+      background-color: white;
+      width: 16px;
+      border-radius: 50%;
+    }
+  }
+  &__icon {
+    @include svg(10px, $icon-color);
+    position: absolute;
+    z-index: 2;
+    right: 12px;
+  }
+}
+
+.checkbox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  margin-right: 8px;
+  &__input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    top: 2px;
+    left: 2px;
+    &:checked + .checkbox__box {
+      .checkbox__icon {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &__box {
+    position: relative;
+    z-index: 2;
+    padding-left: 1px;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $border-color;
+    background-color: #fff;
+    margin-right: 8px;
+    transition: all ease 0.2s;
+    @media screen and (min-width: 1024px) {
+      &:hover {
+        border-color: lightgray;
+      }
+    }
+  }
+  &__icon {
+    width: 11px;
+    height: 11px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.2s;
+  }
+}
+
+.apply-btn {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 17.5px;
+  padding: 7px 24px;
+  background-color: $main-selection;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  @media screen and (min-width: 1024px) {
+    &:hover {
+      filter: brightness(1.05);
+    }
+  }
+  &:active {
+    filter: brightness(0.95);
+  }
+}

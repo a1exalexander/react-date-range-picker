@@ -1,0 +1,59 @@
+@import './calendar.scss';
+@import './dateRange.scss';
+@import './dayCell.scss';
+@import './dateRangePicker.scss';
+@import './definedRange.scss';
+@import './default.scss';
+
+$style: app-date-range-picker;
+.#{$style} {
+  position: relative;
+  &__layer {
+    position: fixed;
+    z-index: 1;
+    @include position;
+    background-color: rgba(9, 30, 66, 0.582);
+  }
+  &__select {
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+    @include flex(stretch, center);
+    cursor: pointer;
+    @include media {
+      &:hover {
+        .#{$style}__input {
+          border-color: darken($border-color, 10%);
+        }
+      }
+    }
+  }
+  &__input {
+    width: 300px;
+    padding: 9px 24px 9px 12px;
+    border-radius: 17.5px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    @include flex(flex-start, center);
+    outline: none;
+    cursor: pointer;
+    @include transition(all);
+  }
+  &__icon {
+    position: absolute;
+    right: 14px;
+    @include svg(10px, $icon-color);
+    cursor: pointer;
+    transform: rotate(180deg);
+    @include transition(transform);
+    &.active {
+      transform: rotate(0deg);
+    }
+  }
+  &__calendar {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 2;
+  }
+}
