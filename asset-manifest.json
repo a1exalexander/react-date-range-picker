@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-date-range-picker/static/css/main.483c3cd8.chunk.css",
+    "main.js": "/react-date-range-picker/static/js/main.48ce5d01.chunk.js",
+    "main.js.map": "/react-date-range-picker/static/js/main.48ce5d01.chunk.js.map",
+    "runtime-main.js": "/react-date-range-picker/static/js/runtime-main.a4e6de71.js",
+    "runtime-main.js.map": "/react-date-range-picker/static/js/runtime-main.a4e6de71.js.map",
+    "static/js/2.e1dcb7c6.chunk.js": "/react-date-range-picker/static/js/2.e1dcb7c6.chunk.js",
+    "static/js/2.e1dcb7c6.chunk.js.map": "/react-date-range-picker/static/js/2.e1dcb7c6.chunk.js.map",
+    "index.html": "/react-date-range-picker/index.html",
+    "precache-manifest.2f23eca0a868cdf1c660dd803592a5be.js": "/react-date-range-picker/precache-manifest.2f23eca0a868cdf1c660dd803592a5be.js",
+    "service-worker.js": "/react-date-range-picker/service-worker.js",
+    "static/css/main.483c3cd8.chunk.css.map": "/react-date-range-picker/static/css/main.483c3cd8.chunk.css.map",
+    "static/js/2.e1dcb7c6.chunk.js.LICENSE.txt": "/react-date-range-picker/static/js/2.e1dcb7c6.chunk.js.LICENSE.txt",
+    "static/media/ArrowDown.8a8c6db7.svg": "/react-date-range-picker/static/media/ArrowDown.8a8c6db7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a4e6de71.js",
+    "static/js/2.e1dcb7c6.chunk.js",
+    "static/css/main.483c3cd8.chunk.css",
+    "static/js/main.48ce5d01.chunk.js"
+  ]
+}
